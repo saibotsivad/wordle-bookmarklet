@@ -1,0 +1,30 @@
+{
+  "name": "wordle-bookmarklet",
+  "version": "0.0.0",
+  "description": "Bookmarklet to show spoiler-avoiding Wordle tiles.",
+  "type": "module",
+  "scripts": {
+    "build": "terser --compress --mangle -- src/index.js > build.txt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saibotsivad/wordle-bookmarklet.git"
+  },
+  "keywords": [
+    "wordle",
+    "bookmarklet"
+  ],
+  "author": {
+    "name": "Tobias Davis",
+    "email": "tobias@davistobias.com",
+    "url": "https://davistobias.com"
+  },
+  "license": "SEE LICENSE IN LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/saibotsivad/wordle-bookmarklet/issues"
+  },
+  "homepage": "https://github.com/saibotsivad/wordle-bookmarklet",
+  "devDependencies": {
+    "terser": "^5.10.0"
+  }
+}
