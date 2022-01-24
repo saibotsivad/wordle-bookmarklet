@@ -63,10 +63,8 @@ function betterTiles () {
 		+ '\n'
 		+ answer.map(() => '🟩').join('')
 
-	const string = `Wordle ${puzzleNumber} ${guesses.length}/6` + '\n' + tiles
-
+	const string = `Wordle ${puzzleNumber} ${guesses.length + 1}/6` + '\n' + tiles
 	console.log(string)
-
 	copyToClipboard(string)
 }
 betterTiles()
