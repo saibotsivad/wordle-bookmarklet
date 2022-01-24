@@ -51,14 +51,26 @@ function betterTiles () {
 	const answer = guesses.pop().split('')
 	const tiles = guesses
 			.reverse()
-			.map(word => word
-				.split('')
-				.map(letter => {
-					const index = answer.indexOf(letter)
-					return index >= 0 ? numbers[index] : '⬛'
+			.map(word => {
+				const matches = [ ...answer ]
+				const chars = word.split('')
+				// first pass for exact matching
+				chars.forEach((letter, letterIndex) => {
+					if (letterIndex === answer.indexOf(letter)) {
+						matches[letterIndex] = 0
+						chars[letterIndex] = '🟩'
+					}
 				})
-				.join(''),
-			)
+				// second pass for mismatched duplicates and others
+				chars.forEach((letter, letterIndex) => {
+					if (matches[letterIndex] === 0) return
+					const answerLetterIndex = matches.indexOf(letter)
+					chars[letterIndex] = answerLetterIndex >= 0
+						? numbers[answerLetterIndex]
+						: '⬛'
+				})
+				return chars.join('')
+			})
 			.reverse()
 			.join('\n')
 		+ '\n'
