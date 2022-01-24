@@ -26,6 +26,7 @@ function betterTiles () {
 		.querySelector('game-app').shadowRoot
 		.querySelectorAll('game-row')
 		.forEach(element => guesses.push(element.attributes.letters.textContent))
+	guesses = guesses.filter(Boolean)
 	// Example guesses:
 	// const guesses = [ 'crabs', 'windy', 'jowly', 'loads', 'kites', 'knoll' ]
 
