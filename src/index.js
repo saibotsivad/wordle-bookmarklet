@@ -45,6 +45,9 @@ function betterTiles () {
 	const puzzleNumber = getSettings().shadowRoot
 		.querySelector('#puzzle-number').textContent
 		.replace('#', '')
+	const hardMode = getSettings().shadowRoot
+		.querySelector('game-switch#hard-mode')
+		.attributes.hasOwnProperty('checked')
 
 	const numbers = [ '1️⃣', '2️⃣', '3️⃣', '4️⃣', '5️⃣' ]
 
@@ -76,7 +79,7 @@ function betterTiles () {
 		+ '\n'
 		+ answer.map(() => '🟩').join('')
 
-	const string = `Wordle ${puzzleNumber} ${guesses.length + 1}/6` + '\n' + tiles
+	const string = `Wordle ${puzzleNumber} ${guesses.length + 1}/6${hardMode ? '*' : ''}` + '\n' + tiles
 	console.log(string)
 	copyToClipboard(string)
 }

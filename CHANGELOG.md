@@ -14,7 +14,7 @@ Change categories are:
 * `Fixed` for any bug fixes.
 * `Security` to invite users to upgrade in case of vulnerabilities.
 
-## [Unreleased]
+## Unreleased
 ### Added
 ### Changed
 ### Deprecated
@@ -22,9 +22,10 @@ Change categories are:
 ### Removed
 ### Security
 
+## [0.0.1](https://github.com/saibotsivad/wordle-bookmarklet/compare/v0.0.0...v0.0.1)
+### Fixed
+- Show the asterisk if in hard mode.
+
 ## [0.0.0](https://github.com/saibotsivad/wordle-bookmarklet/tree/v0.0.0) - 2022-01-24
 ### Added
 - Created the base project from [saibotsivad/init](https://github.com/saibotsivad/init).
-
-[Unreleased]: https://github.com/saibotsivad/wordle-bookmarklet/compare/v0.0.0...HEAD
-[0.0.1]: https://github.com/saibotsivad/wordle-bookmarklet/compare/v0.0.0...v0.0.1
